@@ -5,6 +5,11 @@ import Dashboard from "./Dashboard";
 import Voters from "./voters";
 import AddVoter from './voters/add';
 import VoterList from './voters/list';
+import AddCandidate from './candidates/add';
+import CandidateList from './candidates/list';
+import Positions from './positions';
+import AddPositions from './positions/add';
+import PositionsList from './positions/list';
 export const MainApp = () => {
     return (
         <div>
@@ -16,7 +21,17 @@ export const MainApp = () => {
                     <Route path="add" element={<AddVoter />} />
                     <Route path="list" element={<VoterList />} />
                 </Route>
-                <Route path="candidates" element={<Candidates />} />
+
+                <Route path="candidates" element={<Candidates />} > 
+                    <Route path='add' element={<AddCandidate />}/>
+                    <Route path='list' element={<CandidateList/>}/>
+                </Route>
+
+                <Route path='positions' element={<Positions />}>
+                    <Route path='add' element={<AddPositions />}/>
+                    <Route path='list' element={<PositionsList/>}/>
+                </Route>
+                
             </Routes>
         </div>
     );

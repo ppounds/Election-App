@@ -1,9 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-export const Candidates = () => {
+const Positions = () => {
   return (
     <Outlet />
   )
 }
-export default Candidates;
+
+export default Positions
